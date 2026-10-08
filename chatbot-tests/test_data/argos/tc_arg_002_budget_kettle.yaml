@@ -1,0 +1,23 @@
+id: TC-ARG-002
+persona: Budget-Conscious Shopper
+category: kitchen_appliances
+scenario_objective: Customer wants the lowest priced cordless kettle with strong customer reviews.
+initial_message: What is the cheapest cordless kettle you have that has good customer reviews?
+max_turns: 3
+proceed:
+  turns: 3
+conversation:
+- turn: 1
+  user_message: What is the cheapest cordless kettle you have that has good customer reviews?
+- turn: 2
+  dynamic_follow_up: true
+  follow_up_strategy: response_grounded
+  follow_up_intent: quiet_boil_filter_and_warranty
+- turn: 3
+  dynamic_follow_up: true
+  follow_up_strategy: response_grounded
+  follow_up_intent: capacity_and_rapid_boil_speed
+judge_criteria:
+- Recommends entry-level budget cordless kettles
+- Mentions customer ratings or positive reviews
+- Highlights value for money and warranty features

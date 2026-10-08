@@ -1,0 +1,22 @@
+id: TC-ARG-007
+persona: Gift Shopper / Parent
+category: toys
+scenario_objective: Customer seeks birthday gift for a 7-year-old child who loves outer space and science.
+initial_message: What would be a great birthday gift for a 7-year-old child who loves outer space and science?
+max_turns: 3
+proceed:
+  turns: 3
+conversation:
+- turn: 1
+  user_message: What would be a great birthday gift for a 7-year-old child who loves outer space and science?
+- turn: 2
+  dynamic_follow_up: true
+  follow_up_strategy: response_grounded
+  follow_up_intent: age_suitability_and_reviews
+- turn: 3
+  dynamic_follow_up: true
+  follow_up_strategy: response_grounded
+  follow_up_intent: stem_learning_value_and_durability
+judge_criteria:
+- Recommends age-appropriate gifts for 7+ years old
+- Aligns with space, astronomy, or science themes

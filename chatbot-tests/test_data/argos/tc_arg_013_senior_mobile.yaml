@@ -1,0 +1,22 @@
+id: TC-ARG-013
+persona: Accessibility & Senior / Beginner
+category: mobile_phones
+scenario_objective: Customer needs an accessible mobile phone for an elderly relative with large buttons.
+initial_message: I need an easy-to-use mobile phone for my 82-year-old grandfather with large buttons and an emergency button.
+max_turns: 3
+proceed:
+  turns: 3
+conversation:
+- turn: 1
+  user_message: I need an easy-to-use mobile phone for my 82-year-old grandfather with large buttons and an emergency button.
+- turn: 2
+  dynamic_follow_up: true
+  follow_up_strategy: response_grounded
+  follow_up_intent: hearing_aid_compatibility_and_charging_dock
+- turn: 3
+  dynamic_follow_up: true
+  follow_up_strategy: response_grounded
+  follow_up_intent: battery_standby_time_and_sim_free
+judge_criteria:
+- Recommends senior-friendly phones (e.g. Doro/TTfone)
+- Highlights large physical buttons and emergency SOS features

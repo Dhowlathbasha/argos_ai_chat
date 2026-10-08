@@ -1,0 +1,22 @@
+id: TC-ARG-005
+persona: Tech Enthusiast / Spec-Driven
+category: televisions
+scenario_objective: Customer wants comparison of OLED vs QLED for bright room and a model under 55 inches.
+initial_message: Can you explain the difference between OLED and QLED TVs for a bright living room, and recommend one under 55 inches?
+max_turns: 3
+proceed:
+  turns: 3
+conversation:
+- turn: 1
+  user_message: Can you explain the difference between OLED and QLED TVs for a bright living room, and recommend one under 55 inches?
+- turn: 2
+  dynamic_follow_up: true
+  follow_up_strategy: response_grounded
+  follow_up_intent: gaming_features_and_peak_brightness
+- turn: 3
+  dynamic_follow_up: true
+  follow_up_strategy: response_grounded
+  follow_up_intent: burn_in_risk_and_viewing_angles
+judge_criteria:
+- Accurately explains OLED vs QLED advantages in brightness and contrast
+- Suggests TV models under 55 inches suitable for a bright room

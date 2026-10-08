@@ -1,0 +1,23 @@
+id: TC-ARG-004
+persona: Tech Enthusiast / Spec-Driven
+category: computing
+scenario_objective: Customer seeks high-spec gaming monitor with HDMI 2.1 and >=144Hz for PS5.
+initial_message: Which gaming monitors do you have with HDMI 2.1 and at least 144Hz refresh rate for PS5 gaming?
+max_turns: 3
+proceed:
+  turns: 3
+conversation:
+- turn: 1
+  user_message: Which gaming monitors do you have with HDMI 2.1 and at least 144Hz refresh rate for PS5 gaming?
+- turn: 2
+  dynamic_follow_up: true
+  follow_up_strategy: response_grounded
+  follow_up_intent: connectivity_and_panel_comparison
+- turn: 3
+  dynamic_follow_up: true
+  follow_up_strategy: response_grounded
+  follow_up_intent: built_in_speakers_and_stand_adjustability
+judge_criteria:
+- Filters for gaming monitors with 144Hz+ refresh rate
+- Addresses HDMI 2.1 connectivity or console gaming compatibility
+- Provides accurate technical display advice

@@ -1,0 +1,24 @@
+[project]
+name = "chatbot-tests"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "aiohttp>=3.14.1",
+    "boto3>=1.43.40",
+    "fpdf2>=2.8.4",
+    "langwatch-scenario>=0.7.31",
+    "pandas>=3.0.3",
+    "pdfplumber>=0.11.10",
+    "pillow>=11.0.0",
+    "playwright>=1.61.0",
+    "plotly>=6.9.0",
+    "pytest>=9.1.1",
+    "pytest-asyncio>=1.4.0",
+    "pytest-timeout>=2.4.0",
+    "pytest-xdist>=3.6.1",
+    "python-dotenv>=1.2.2",
+    "streamlit>=1.59.2",
+    "tqdm>=4.67.0",
+]

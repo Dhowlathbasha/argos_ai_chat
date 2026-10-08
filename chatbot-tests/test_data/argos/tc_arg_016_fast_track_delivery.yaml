@@ -1,0 +1,22 @@
+id: TC-ARG-016
+persona: Fulfillment & Customer Service
+category: customer_service
+scenario_objective: Customer asks how Fast Track same-day delivery works.
+initial_message: How does Fast Track same-day delivery work at Argos, and can I get small appliances delivered today?
+max_turns: 3
+proceed:
+  turns: 3
+conversation:
+- turn: 1
+  user_message: How does Fast Track same-day delivery work at Argos, and can I get small appliances delivered today?
+- turn: 2
+  dynamic_follow_up: true
+  follow_up_strategy: response_grounded
+  follow_up_intent: delivery_time_slots_and_return_policy
+- turn: 3
+  dynamic_follow_up: true
+  follow_up_strategy: response_grounded
+  follow_up_intent: click_and_collect_alternative_and_fees
+judge_criteria:
+- Explains Fast Track same day delivery availability and time slots
+- Advises checking postcode for local store stock

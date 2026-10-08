@@ -1,0 +1,27 @@
+id: TC-ARG-019
+persona: Multi-Turn Contextual Dialogue
+category: audio
+scenario_objective: Multi-turn inquiry starting with over-ear headphones, refining to ANC under £100, then comparing battery life.
+initial_message: Show me some wireless over-ear headphones.
+max_turns: 4
+proceed:
+  turns: 4
+conversation:
+- turn: 1
+  user_message: Show me some wireless over-ear headphones.
+- turn: 2
+  dynamic_follow_up: true
+  follow_up_strategy: response_grounded
+  follow_up_intent: refine_and_compare_recommended_models
+- turn: 3
+  dynamic_follow_up: true
+  follow_up_strategy: response_grounded
+  follow_up_intent: deep_spec_and_value_comparison
+- turn: 4
+  dynamic_follow_up: true
+  follow_up_strategy: response_grounded
+  follow_up_intent: warranty_and_delivery_check
+judge_criteria:
+- Retains context of previous turn recommendations
+- Applies ANC and price filters correctly
+- Identifies the model with the longest battery duration

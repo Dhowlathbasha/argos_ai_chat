@@ -1,0 +1,22 @@
+id: TC-ARG-010
+persona: Home & Family Practicality
+category: large_appliances
+scenario_objective: Customer has small kitchen and requires a 45cm slimline dishwasher.
+initial_message: I have a compact kitchen space. What slimline dishwashers do you have that are 45cm wide?
+max_turns: 3
+proceed:
+  turns: 3
+conversation:
+- turn: 1
+  user_message: I have a compact kitchen space. What slimline dishwashers do you have that are 45cm wide?
+- turn: 2
+  dynamic_follow_up: true
+  follow_up_strategy: response_grounded
+  follow_up_intent: energy_rating_and_place_settings
+- turn: 3
+  dynamic_follow_up: true
+  follow_up_strategy: response_grounded
+  follow_up_intent: noise_decibel_level_and_quick_wash_cycle
+judge_criteria:
+- Recommends slimline 45cm dishwashers
+- Does not suggest standard 60cm full-size dishwashers

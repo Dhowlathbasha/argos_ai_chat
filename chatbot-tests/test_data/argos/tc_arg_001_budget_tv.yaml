@@ -1,0 +1,23 @@
+id: TC-ARG-001
+persona: Budget-Conscious Shopper
+category: televisions
+scenario_objective: Customer wants a 4K Ultra HD Smart TV strictly under £250.
+initial_message: Find me a 4K Ultra HD Smart TV strictly under £250.
+max_turns: 3
+proceed:
+  turns: 3
+conversation:
+- turn: 1
+  user_message: Find me a 4K Ultra HD Smart TV strictly under £250.
+- turn: 2
+  dynamic_follow_up: true
+  follow_up_strategy: response_grounded
+  follow_up_intent: warranty_and_spec_drilldown
+- turn: 3
+  dynamic_follow_up: true
+  follow_up_strategy: response_grounded
+  follow_up_intent: energy_rating_and_delivery_options
+judge_criteria:
+- Every recommended television price must be <= £250
+- Recommended products must be 4K or Smart TVs
+- Must not recommend televisions exceeding the budget
